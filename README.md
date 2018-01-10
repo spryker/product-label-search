@@ -1,11 +1,14 @@
-# Spryker Commerce OS
+# ProductLabelSearch Module
+[![Build Status](https://travis-ci.org/spryker/ProductLabelSearch.svg)](https://travis-ci.org/spryker/ProductLabelSearch)
+[![Coverage Status](https://coveralls.io/repos/github/spryker/ProductLabelSearch/badge.svg)](https://coveralls.io/github/spryker/ProductLabelSearch)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker/ProductLabelSearch/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker/ProductLabelSearch/?branch=master)
 
-## Core Modules
+## Installation
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/spryker/spryker-core/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/spryker/spryker-core/?branch=master)
+```
+composer require spryker/product-label-page-search
+```
 
-### Links
-- **[Spryker Documentation](https://academy.spryker.com/)**
-- [Spryker Architecture-Sniffer](https://github.com/spryker/architecture-sniffer)
-- [Spryker Code-Sniffer](https://github.com/spryker/code-sniffer)
-- [Spryker Code-Generator](https://github.com/spryker/code-generator)
+## Documentation
+
+[Spryker Documentation](https://spryker.github.io)
