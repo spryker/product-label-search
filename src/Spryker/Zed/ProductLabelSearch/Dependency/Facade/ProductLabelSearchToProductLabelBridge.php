@@ -38,16 +38,6 @@ class ProductLabelSearchToProductLabelBridge implements ProductLabelSearchToProd
     /**
      * @param \Generated\Shared\Transfer\ProductLabelCriteriaTransfer $productLabelCriteriaTransfer
      *
-     * @return array<\Generated\Shared\Transfer\ProductLabelTransfer>
-     */
-    public function getActiveLabelsByCriteria(ProductLabelCriteriaTransfer $productLabelCriteriaTransfer): array
-    {
-        return $this->productLabelFacade->getActiveLabelsByCriteria($productLabelCriteriaTransfer);
-    }
-
-    /**
-     * @param \Generated\Shared\Transfer\ProductLabelCriteriaTransfer $productLabelCriteriaTransfer
-     *
      * @return \Generated\Shared\Transfer\ProductLabelCollectionTransfer
      */
     public function getProductLabelCollection(
