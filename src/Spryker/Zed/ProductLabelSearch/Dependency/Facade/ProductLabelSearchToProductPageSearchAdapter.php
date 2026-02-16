@@ -29,6 +29,7 @@ class ProductLabelSearchToProductPageSearchAdapter implements ProductLabelSearch
      */
     public function publishWithTimestamp(array $productAbstractIdTimestampMap): void
     {
+        // @phpstan-ignore function.alreadyNarrowedType (BC check for older ProductPageSearch module versions)
         if (!method_exists($this->productPageSearchFacade, 'publishWithTimestamp') === false) {
             $this->productPageSearchFacade->refresh(array_keys($productAbstractIdTimestampMap));
         }

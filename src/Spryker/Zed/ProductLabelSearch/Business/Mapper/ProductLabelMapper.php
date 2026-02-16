@@ -15,7 +15,7 @@ class ProductLabelMapper implements ProductLabelMapperInterface
     /**
      * @param \Generated\Shared\Transfer\ProductLabelCollectionTransfer $productLabelCollectionTransfer
      *
-     * @return array<array<int>>
+     * @return array<int, array<string, list<int>>>
      */
     public function getProductLabelIdsMappedByIdProductAbstractAndStoreName(ProductLabelCollectionTransfer $productLabelCollectionTransfer): array
     {
@@ -33,9 +33,9 @@ class ProductLabelMapper implements ProductLabelMapperInterface
 
     /**
      * @param \Generated\Shared\Transfer\ProductLabelTransfer $productLabelTransfer
-     * @param array<array<int>> $productLabelIdsMap
+     * @param array<int, array<string, list<int>>> $productLabelIdsMap
      *
-     * @return array<array<int>>
+     * @return array<int, array<string, list<int>>>
      */
     protected function mapProductLabelTransferToProductLabelIdsByIdProductAbstractAndStoreName(
         ProductLabelTransfer $productLabelTransfer,
@@ -43,7 +43,7 @@ class ProductLabelMapper implements ProductLabelMapperInterface
     ): array {
         foreach ($productLabelTransfer->getStoreRelation()->getStores() as $storeTransfer) {
             foreach ($productLabelTransfer->getProductLabelProductAbstracts() as $productLabelProductAbstract) {
-                $productLabelIdsMap[$productLabelProductAbstract->getFkProductAbstract()][$storeTransfer->getName()][] = $productLabelTransfer->getIdProductLabel();
+                $productLabelIdsMap[$productLabelProductAbstract->getFkProductAbstractOrFail()][$storeTransfer->getNameOrFail()][] = $productLabelTransfer->getIdProductLabelOrFail();
             }
         }
 
