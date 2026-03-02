@@ -49,11 +49,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
      */
     public const PROPEL_QUERY_PRODUCT_LABEL = 'PROPEL_QUERY_PRODUCT_LABEL';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -65,11 +60,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -80,11 +70,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function providePersistenceLayerDependencies(Container $container): Container
     {
         $container = parent::providePersistenceLayerDependencies($container);
@@ -93,11 +78,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addPropelProductLabelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_PRODUCT_LABEL, $container->factory(function (): SpyProductLabelQuery {
@@ -107,11 +87,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilSanitizeService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_SANITIZE, function (Container $container): ProductLabelSearchToUtilSanitizeServiceInterface {
@@ -123,11 +98,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addEventBehaviorFacade(Container $container): Container
     {
         $container->set(static::FACADE_EVENT_BEHAVIOR, function (Container $container): ProductLabelSearchToEventBehaviorFacadeInterface {
@@ -139,11 +109,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductLabelFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_LABEL, function (Container $container): ProductLabelSearchToProductLabelInterface {
@@ -155,11 +120,6 @@ class ProductLabelSearchDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductPageSearchFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT_PAGE_SEARCH, function (Container $container): ProductLabelSearchToProductPageSearchInterface {

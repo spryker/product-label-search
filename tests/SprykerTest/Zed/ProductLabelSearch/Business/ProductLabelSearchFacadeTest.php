@@ -61,9 +61,6 @@ class ProductLabelSearchFacadeTest extends Unit
      */
     protected const STORE_NAME_DE = 'DE';
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelEventspublishWithTimestampsProductPageSearchWithCorrectData(): void
     {
         // Arrange
@@ -100,9 +97,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelEventsDoesNothingWithIncorrectData(): void
     {
         // Arrange
@@ -131,9 +125,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelProductAbstractEventspublishWithTimestampsProductPageSearchWithCorrectData(): void
     {
         // Arrange
@@ -169,9 +160,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelProductAbstractEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelProductAbstractEventsDoesNothingWithIncorrectData(): void
     {
         // Arrange
@@ -193,9 +181,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelProductAbstractEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelStoreEventspublishWithTimestampsProductPageSearchWithCorrectData(): void
     {
         // Arrange
@@ -242,9 +227,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelStoreEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByProductLabelStoreEventsDoesNothingWithIncorrectData(): void
     {
         // Arrange
@@ -266,9 +248,6 @@ class ProductLabelSearchFacadeTest extends Unit
         $this->tester->getFacade()->writeCollectionByProductLabelStoreEvents($eventTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductPageDataTransferWithProductLabelIdsReturnsUpdatedTransferWithCorrectData(): void
     {
         // Arrange
@@ -337,9 +316,6 @@ class ProductLabelSearchFacadeTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductPageDataTransferWithProductLabelIdsDoesNothingWithIncorrectData(): void
     {
         // Arrange
@@ -371,9 +347,6 @@ class ProductLabelSearchFacadeTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductPageDataTransferWithProductLabelIdsShouldAvoidExpandingWhenProductAbstractIdsAreEmpty(): void
     {
         // Arrange
@@ -402,9 +375,6 @@ class ProductLabelSearchFacadeTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductPageDataTransferWithProductLabelIdsShouldAvoidExpandingWhenProductAbstractIdsIsNull(): void
     {
         // Arrange
@@ -450,21 +420,11 @@ class ProductLabelSearchFacadeTest extends Unit
         return $productPageSearchFacadeMock;
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\EventEntityTransfer
-     */
     protected function getEventEntityTransfer(array $seedData): EventEntityTransfer
     {
         return (new EventEntityBuilder())->seed($seedData)->build();
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\ProductPayloadTransfer
-     */
     protected function getProductPayloadTransfer(array $seedData): ProductPayloadTransfer
     {
         return (new ProductPayloadBuilder())->seed($seedData)->build();

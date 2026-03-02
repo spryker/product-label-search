@@ -26,9 +26,6 @@ use Spryker\Zed\ProductLabelSearch\ProductLabelSearchDependencyProvider;
  */
 class ProductLabelSearchBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Business\Writer\ProductLabelSearchWriterInterface
-     */
     public function createProductLabelSearchWriter(): ProductLabelSearchWriterInterface
     {
         return new ProductLabelSearchWriter(
@@ -38,9 +35,6 @@ class ProductLabelSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Business\PageData\ProductPageDataTransferExpanderInterface
-     */
     public function createProductPageDataTransferExpander(): ProductPageDataTransferExpanderInterface
     {
         return new ProductPageDataTransferExpander(
@@ -49,33 +43,21 @@ class ProductLabelSearchBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Business\Mapper\ProductLabelMapperInterface
-     */
     public function createProductLabelMapper(): ProductLabelMapperInterface
     {
         return new ProductLabelMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): ProductLabelSearchToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(ProductLabelSearchDependencyProvider::FACADE_EVENT_BEHAVIOR);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToProductPageSearchInterface
-     */
     public function getProductPageSearchFacade(): ProductLabelSearchToProductPageSearchInterface
     {
         return $this->getProvidedDependency(ProductLabelSearchDependencyProvider::FACADE_PRODUCT_PAGE_SEARCH);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToProductLabelInterface
-     */
     public function getProductLabelFacade(): ProductLabelSearchToProductLabelInterface
     {
         return $this->getProvidedDependency(ProductLabelSearchDependencyProvider::FACADE_PRODUCT_LABEL);

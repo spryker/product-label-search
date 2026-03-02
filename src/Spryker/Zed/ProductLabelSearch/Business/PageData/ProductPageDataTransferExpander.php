@@ -29,10 +29,6 @@ class ProductPageDataTransferExpander implements ProductPageDataTransferExpander
      */
     protected $productLabelFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductLabelSearch\Business\Mapper\ProductLabelMapperInterface $productLabelMapper
-     * @param \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToProductLabelInterface $productLabelFacade
-     */
     public function __construct(
         ProductLabelMapperInterface $productLabelMapper,
         ProductLabelSearchToProductLabelInterface $productLabelFacade
@@ -41,11 +37,6 @@ class ProductPageDataTransferExpander implements ProductPageDataTransferExpander
         $this->productLabelFacade = $productLabelFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
-     */
     public function expandProductPageDataTransferWithProductLabelIds(ProductPageLoadTransfer $productPageLoadTransfer): ProductPageLoadTransfer
     {
         $productLabelCollectionTransfer = $this->getProductLabelCollection($productPageLoadTransfer);
@@ -88,11 +79,6 @@ class ProductPageDataTransferExpander implements ProductPageDataTransferExpander
         return $payloadTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductLabelCollectionTransfer
-     */
     protected function getProductLabelCollection(ProductPageLoadTransfer $productPageLoadTransfer): ProductLabelCollectionTransfer
     {
         $productAbstractIds = array_filter($productPageLoadTransfer->getProductAbstractIds());

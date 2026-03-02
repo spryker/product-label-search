@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductPageLoadTransfer;
 
 interface ProductPageDataTransferExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
-     */
     public function expandProductPageDataTransferWithProductLabelIds(ProductPageLoadTransfer $productPageLoadTransfer): ProductPageLoadTransfer;
 }

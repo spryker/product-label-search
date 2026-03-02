@@ -27,9 +27,6 @@ class ProductLabelSearchPersistenceFactory extends AbstractPersistenceFactory
         return SpyProductLabelProductAbstractQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ProductLabel\Persistence\SpyProductLabelQuery
-     */
     public function getPropelProductLabelQuery(): SpyProductLabelQuery
     {
         return $this->getProvidedDependency(ProductLabelSearchDependencyProvider::PROPEL_QUERY_PRODUCT_LABEL);

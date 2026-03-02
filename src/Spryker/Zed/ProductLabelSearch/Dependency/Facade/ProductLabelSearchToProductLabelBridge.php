@@ -35,11 +35,6 @@ class ProductLabelSearchToProductLabelBridge implements ProductLabelSearchToProd
         return $this->productLabelFacade->findLabelIdsByIdProductAbstract($idProductAbstract);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductLabelCriteriaTransfer $productLabelCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductLabelCollectionTransfer
-     */
     public function getProductLabelCollection(
         ProductLabelCriteriaTransfer $productLabelCriteriaTransfer
     ): ProductLabelCollectionTransfer {

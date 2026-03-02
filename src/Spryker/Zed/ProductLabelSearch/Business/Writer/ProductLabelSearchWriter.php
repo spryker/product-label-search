@@ -44,11 +44,6 @@ class ProductLabelSearchWriter implements ProductLabelSearchWriterInterface
      */
     protected $productLabelSearchRepository;
 
-    /**
-     * @param \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToEventBehaviorFacadeInterface $eventBehaviorFacade
-     * @param \Spryker\Zed\ProductLabelSearch\Dependency\Facade\ProductLabelSearchToProductPageSearchInterface $productPageSearchFacade
-     * @param \Spryker\Zed\ProductLabelSearch\Persistence\ProductLabelSearchRepositoryInterface $productLabelSearchRepository
-     */
     public function __construct(
         ProductLabelSearchToEventBehaviorFacadeInterface $eventBehaviorFacade,
         ProductLabelSearchToProductPageSearchInterface $productPageSearchFacade,

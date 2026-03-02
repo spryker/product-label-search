@@ -86,12 +86,6 @@ class ProductLabelSearchPublisherTriggerPlugin extends AbstractPlugin implements
         return static::COL_ID_PRODUCT_LABEL;
     }
 
-    /**
-     * @param int $offset
-     * @param int $limit
-     *
-     * @return \Generated\Shared\Transfer\ProductLabelCriteriaTransfer
-     */
     protected function createProductLabelCriteriaTransfer(int $offset, int $limit): ProductLabelCriteriaTransfer
     {
         return (new ProductLabelCriteriaTransfer())

@@ -32,9 +32,6 @@ class ProductLabelSearchListenerTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testQueryProductLabelByProductLabelIds(): void
     {
         $productLabelTransfer = $this->tester->haveProductLabel();
@@ -52,9 +49,6 @@ class ProductLabelSearchListenerTest extends Unit
         $this->assertSame(1, $result);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabel\Business\ProductLabelFacadeInterface
-     */
     protected function createProductLabelFacade(): ProductLabelFacadeInterface
     {
         return new ProductLabelFacade();
