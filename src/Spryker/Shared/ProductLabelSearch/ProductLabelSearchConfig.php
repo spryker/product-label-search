@@ -90,6 +90,8 @@ interface ProductLabelSearchConfig
     public const ENTITY_SPY_PRODUCT_LABEL_STORE_DELETE = 'Entity.spy_product_label_store.delete';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const PLUGIN_PRODUCT_LABEL_DATA = 'PLUGIN_PRODUCT_LABEL_DATA';
